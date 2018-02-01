@@ -11,7 +11,7 @@ router.post('/create', (req, res, next) =>{
         if(err){
             res.status(500).json({errmsg:err});
         }
-        res.status(200).json({errmsg:country});
+        res.status(200).json({msg:country});
     });    
 });
 
@@ -20,7 +20,7 @@ router.get('/read', (req, res, next) =>{
         if(err){
             res.status(500).json({errmsg:err});
         }
-        res.status(200).json({errmsg: countries});
+        res.status(200).json({msg: countries});
     });
 });
 
@@ -48,7 +48,7 @@ router.delete('/delete/:id', (req, res, next) =>{
         if(err){
             res.status(500).json({errmsg: err});
         }
-        res.status(200).json({errmsg: country});
+        res.status(200).json({msg: country});
     });
     res.status(200).json({msg: 'Delete request is working'});
 });
